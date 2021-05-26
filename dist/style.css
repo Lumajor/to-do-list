@@ -1,0 +1,160 @@
+.header {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    height: 10%;
+    width: 100%;
+}
+
+.to-do-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    border: solid 10px black;
+    height: 82%;
+}
+
+#toDoControllerContainer {
+    width: 25%;
+    overflow: auto;
+}
+
+.to-dos-container {
+    width: 75%
+}
+
+.controller-child {
+    border: solid 3px black;
+    height: 10%;
+    cursor: pointer;
+    margin-top: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.empty-to-do {
+    font-weight: bold;
+    text-align: center;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input#title {
+    width: 80%;
+}
+
+input#description {
+    width: 80%;
+}
+
+.toDoChildContainer {
+    border: solid 1px black;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.toDoChildTitle {
+    display: flex;
+    margin-top: 3px;
+    padding: 2px;
+    margin-left: 3px;
+    margin-right: 3px;
+    align-items: center;
+}
+
+.toDoChildInfo {
+    display: flex;
+    margin-top: 3px;
+    padding: 2px;
+    margin-left: 3px;
+    margin-right: 3px;
+    align-items: center;
+}
+
+.detailChild {
+    margin-right: 15px;
+}
+
+.toDoChildInfo button {
+    cursor: pointer;
+}
+
+#expandDetails .detailTitle {
+    font-weight: bold;
+}
+
+.projects-list {
+    margin-top: 5px;
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.project-child {
+    border: solid 3px black;
+    height: 10%;
+    cursor: pointer;
+    margin-top: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selected {
+    background-color: #aaaaaa;
+}
+
+.unselected {
+    background-color: #fefefe;
+}
+
+.controller-child:hover {
+    background-color: #aaaaaa;
+}
+
+.project-child:hover {
+    background-color: #aaaaaa;
+}
+
+img {
+    cursor: pointer;
+}

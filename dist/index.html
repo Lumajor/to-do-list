@@ -1,0 +1,112 @@
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <div class="header">To-Do List</div>
+</head>
+
+<body>
+    <div class="to-do-container">
+        <div id="toDoControllerContainer">
+            <div id="createNewToDo" class="controller-child">
+                Create a new to-do
+            </div>
+            <div id="createNewProject" class="controller-child">
+                Create a new project
+            </div>
+            <div class="projects-list">
+                Projects
+                <div id="projectsContainer">
+                    <div id="allProjects">
+                        <p class="project-child" id="HomeProject">
+                            Home
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="to-dos-container">
+
+           <div id="createNewToDoModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close" id="createNewToDoClose">&times;</span>
+                  <form id="userInputContainer">
+                      <label for="title">Title: </label>
+                      <input type="text" id="title" name="title"><br><br>
+                      <label for="description">Description: </label>
+                      <input type="text" id="description" name="description"><br><br>
+                      <label for="dueDate">Due date:</label>
+                      <input type="date" id="dueDate" name="dueDate"
+                        min="2018-01-01" max="2080-12-31">
+                      <label for="priority">Priority Level: </label>
+                      <div class="input-field">
+                        <select name="priority" id="priority">
+                            <option value="lowPriority" class='prioritySelect'>Low</option>
+                            <option value="mediumPriority" class='prioritySelect'>Medium</option>
+                            <option value="highPriority" class='prioritySelect'>High</option>
+                        </select>
+                      </div>
+                      <label for="projectSelector">Select Project: </label>
+                      <div class="input-field">
+                        <select name="projectSelector" id="projectSelector">
+
+                        </select><br><br>
+                      </div>
+                      <input type="button" value="Submit To-Do" id="createNewToDoSubmit">                   
+                  </form>
+                </div>
+            </div>
+
+            <div id="createNewProjectModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close" id="createNewProjectClose">&times;</span>
+                  <form id="projectInputContainer">
+                    <label for="projectName">Project Name: </label>
+                    <input type="text" id="projectName" name="projectName">
+                    <input type="button" value="Submit Project" id="createNewProjectSubmit">   
+                  </form>
+                </div>
+            </div>
+
+            <div id="toDoDetailsModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content"  id="modalInfo">
+                  <span class="close" id="toDoDetailsClose">&times;</span>
+                  <div id="detailContainer">
+
+                  </div>
+                </div>
+            </div>
+
+            <div id="editToDoModal" class="modal">
+                <div class="modal-content">
+                  <span class="close" id="editToDoClose">&times;</span>
+                  <div id="editContainer">
+                    
+                  </div>
+                </div>
+            </div>
+
+            <div class="empty-to-do">
+                Add a to-do to begin your list
+            </div>
+            <div id="toDos">
+                <div id="HomeProjectContainer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>Icons made by <a href="https://www.flaticon.com/authors/bqlqn" title="bqlqn">bqlqn</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    <script src="./main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems, '.prioritySelect');
+        });
+    </script>
+</body>
